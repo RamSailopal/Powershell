@@ -29,7 +29,10 @@ while(1) {
         Write-Host -ForegroundColor red "Press any key to quit" 
     }
     Start-Sleep -Seconds 1
-    If ( $host.UI.RawUI.KeyAvailable) {
+    #
+    #   Check for a key being pressed while sleep is in progress
+    #
+    If ( $host.UI.RawUI.KeyAvailable ) {
         $key = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyUp,IncludeKeyDown")
         If ($key.KeyDown -eq "True") {
             break
