@@ -1,7 +1,6 @@
 #
 #   Display a clock, clearing the screen each second
 #
-$i=1
 while(1) {
     cls
     Get-Date | ForEach-Object {
