@@ -1,3 +1,6 @@
+#
+#   Display a clock, clearing the screen each second
+#
 for ($i=1; $i -le 60; $i++) {
     cls
     Get-Date | ForEach-Object {

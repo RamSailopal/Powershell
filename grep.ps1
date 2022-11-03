@@ -1,5 +1,5 @@
 #
-#   Script to ask for text for search and then search all text files for that text
+#   Replicates Linux grep
 #
 If ($args.count -eq 0) {
     $path = Read-Host "Please select a path"

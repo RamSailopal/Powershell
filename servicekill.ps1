@@ -1,3 +1,6 @@
+#
+#   Service restart script
+#
 $serv = Read-Host -Prompt "Enter the service you wish to restart ";`
 $srvc = Get-WmiObject win32_service | Where-Object { $_.Name -eq $serv };`
 if ( $srvc.Length -eq 0 ) {`
