@@ -2,7 +2,7 @@
 
 Simple Powershell examples
 
-# Adding commands to shell as function when Powershell loads
+# Adding script to shell as function when Powershell loads (.bashrc/.profile equivalent)
 
     New-Item $profile -Type File -Force
     
