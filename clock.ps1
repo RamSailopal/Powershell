@@ -1,7 +1,8 @@
 #
 #   Display a clock, clearing the screen each second
 #
-for ($i=1; $i -le 60; $i++) {
+$i=1
+while(1) {
     cls
     Get-Date | ForEach-Object {
         $day=$_.Day.toString()
@@ -25,7 +26,14 @@ for ($i=1; $i -le 60; $i++) {
         If ($second.Length -eq 1) {
             $second = "0$($second)"
         }
-        Write-Host "$($_.DayofWeek) $($day)/$($month)/$($year) $($hour):$($minute):$($second)" 
+        Write-Host "$($_.DayofWeek) $($day)/$($month)/$($year) $($hour):$($minute):$($second)"
+        Write-Host -ForegroundColor red "Press any key to quit" 
     }
     Start-Sleep -Seconds 1
+    If ( $host.UI.RawUI.KeyAvailable) {
+        $key = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyUp,IncludeKeyDown")
+        If ($key.KeyDown -eq "True") {
+            break
+        }
+    }
 }
