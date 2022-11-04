@@ -22,7 +22,7 @@ if ( $args.length -eq 0) {
     if ($valid -eq 1) {
         Get-Help $rcmd
         $cmd = "$($rcmd) | Get-Member"
-        Invoke-Expression $cmd
+        Invoke-Expression $cmd | Format-Table
     }
     else {
         Write-Host -ForegroundColor Red "Command is not valid"
@@ -33,7 +33,7 @@ else {
     if ($valid -eq 1) {
         Get-Help $args[0]
         $cmd = "$($args[0]) | Get-Member"
-        Invoke-Expression $cmd
+        Invoke-Expression $cmd | Format-Table
     }
     else {
         Write-Host -ForegroundColor Red "Command is not valid"
