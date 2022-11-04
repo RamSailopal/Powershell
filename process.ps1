@@ -38,9 +38,10 @@ If ($type -eq "cpu") {
             id = $_.id
             cpu = $_.CPU
             count  = $cnt
+            path = $path
         } 
     }
-    $objData |  Format-Table count,cpu,id 
+    $objData |  Format-Table count,cpu,id,path 
 }
 else {
     $objData = @() # Initialise an object
@@ -60,7 +61,8 @@ else {
             id = $_.id
             mem = $_.PM
             count  = $cnt
+            path = $path
         } 
     }
-    $objData |  Format-Table count,mem,id 
+    $objData |  Format-Table count,mem,id,path 
 }
