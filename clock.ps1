@@ -2,7 +2,7 @@
 #   Display a clock, clearing the screen each second
 #
 while(1) {
-    cls
+    Clear-Host
     Get-Date | ForEach-Object {
         $day=$_.Day.toString()
         $month=$_.Month.toString()
