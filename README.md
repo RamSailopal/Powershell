@@ -46,7 +46,7 @@ Get the last 5 application errors
     
     Invoke-Command -Session $s { hostname }
     
- Execute the same command creating a persistent session.
+ Execute the same command creating a persistent session (variables created remotely are persisted across Invoke-Command calls)
  
  
     
