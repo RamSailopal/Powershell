@@ -28,4 +28,29 @@ Get a list of the log types
    
 Get the last 5 application errors
 
+**Remote Connections**
+
+    Enable-PSRemoting -Force
+    
+ Enable remote connection to machine
+ 
+    $hostnme = hostname
+    
+    Invoke-Command -ComputerName $hostnme -ScriptBlock { hostname }
+    
+ Execute the command **hostname** on the localhost
+ 
+    $hostnme = hostname
+    
+    $s = New-PSSession -ComputerName $hostnme
+    
+    Invoke-Command -Session $s { hostname }
+    
+ Execute the same command creating a persistent session.
+ 
+ 
+    
+ 
+ 
+
 
