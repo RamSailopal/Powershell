@@ -48,6 +48,12 @@ Get the last 5 application errors
     
  Execute the same command creating a persistent session (variables created remotely are persisted across Invoke-Command calls)
  
+ **Environmental Variables**
+ 
+    Get-ChildItem -Path Env:
+    
+ Get environmental variables.
+ 
  
     
  
