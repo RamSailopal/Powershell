@@ -54,6 +54,14 @@ Get the last 5 application errors
     
  Get environmental variables.
  
+ **Memory usage**
+ 
+    systeminfo | ForEach-Object { If ( $_ -like "*Memory*") { Write-Host $_ } }
+    
+ **CPU utlisation**
+ 
+    Get-WmiObject Win32_Processor | Measure-Object -Property LoadPercentage -Average | Select Average
+ 
  
     
  
